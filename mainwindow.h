@@ -4,8 +4,9 @@
 #include <QMainWindow>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QChartView>
 
-class MainWindow : public QMainWindow
+class MainWindow : public QWidget
 {
     Q_OBJECT
 
@@ -14,6 +15,9 @@ public:
     ~MainWindow();
 
     void setup();
+    QChartView* setupGraph();
+    void calculateInvestment();
+    void resetForm();
 
 private:
 
