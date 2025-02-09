@@ -5,6 +5,7 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QChartView>
+#include <QLabel>
 
 class MainWindow : public QWidget
 {
@@ -16,6 +17,8 @@ public:
 
     void setup();
     QChartView* setupGraph();
+
+public slots:
     void calculateInvestment();
     void resetForm();
 
@@ -28,5 +31,6 @@ private:
     QLineEdit* m_ContributionIncreaseEdit;
     QPushButton* m_CalculateButton;
     QPushButton* m_ResetButton;
+    QLabel* m_SummaryLabel;
 };
 #endif // MAINWINDOW_H
